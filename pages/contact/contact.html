@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body class="fade-in">
+  <header id="main-header">
+    <div class="container">
+      <h1>Vihaan Vikas</h1>
+      <nav>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../pages/about/about.html">About</a></li>
+          <li><a href="../../pages/projects/projects.html">Projects</a></li>
+          <li><a href="../../pages/contact/contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<main class="container">
+  <section class="contact-section">
+    <h2>Hey, got something in mind?</h2>
+    <p>
+      I'm always up for connecting with like-minded people, collaborating on exciting projects, or just chatting about tech, creativity, and everything in between. Whether you’ve got a cool idea, a question, or just want to say hi — feel free to reach out! I'm especially into coding, open-source, and building things that make an impact.
+    </p>
+
+    <div class="contact-icons">
+      <a href="https://github.com/vihaan-vikas" target="_blank" aria-label="GitHub">
+        <img src="../../assets/github.svg" alt="GitHub" />
+      </a>
+      <a href="https://linkedin.com/in/vihaan-vikas-20july1969" target="_blank" aria-label="LinkedIn">
+        <img src="../../assets/linkedin.svg" alt="LinkedIn" />
+      </a>
+      <a href="https://x.com/vihaan__vikas" target="_blank" aria-label="X (Twitter)">
+        <img src="../../assets/x.svg" alt="X" />
+      </a>
+    </div>
+  </section>
+
+  <section class="contact-form-section">
+  <h2>Contact Form</h2>
+
+  <form action="https://formsubmit.co/1603c8656a57ad10ba20810a76cc5afc" method="POST" class="contact-form">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://vihaan-vikas.github.io/personal-website/pages/thankyou/thankyou.html">
+
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="John Doe" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
+    </div>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Vihaan Vikas. All rights reserved.</p>
+</footer>
+
+<script src="contact.js"></script>
+</body>
+</html>

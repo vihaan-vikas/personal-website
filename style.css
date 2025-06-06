@@ -1,0 +1,223 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background-color: #ececec;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 100;
+}
+
+header.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+}
+
+header h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #222;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+/* Hover lifts link */
+nav a:hover {
+  color: #007acc;
+  transform: translateY(-3px);
+}
+
+/* Active just changes color, no lift */
+nav a.active {
+  color: #007acc;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, #cdeaff, #ffffff);
+  position: relative;
+  z-index: 1;
+  transform-origin: center;
+  transition: transform 0.1s ease-out, opacity 0.3s ease-out;
+  will-change: transform, opacity;
+}
+
+.hero h2 {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-out;
+}
+
+.hero p {
+  font-size: 2rem;
+  color: #444;
+  transition: transform 0.3s ease-out;
+}
+
+/* Section Styles */
+section {
+  padding: 4rem 0;
+}
+
+.about-preview,
+.projects-preview,
+.contact-preview {
+  background-color: #ffffff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007acc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Projects Preview */
+.projects-preview .project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.projects-preview img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.projects-preview h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .projects-preview .project {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h2 {
+    font-size: 2.8rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Fade animation */
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease forwards;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}

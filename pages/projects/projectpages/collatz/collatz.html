@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Collatz</title>
+  <link rel="stylesheet" href="collatz.css" />
+</head>
+<body class="fade-in">
+  <header id="main-header">
+    <div class="container">
+      <h1>Vihaan Vikas</h1>
+      <nav>
+        <ul>
+          <li><a href="../../../../index.html">Home</a></li>
+          <li><a href="../../../../pages/about/about.html">About</a></li>
+          <li><a href="../../../../pages/projects/projects.html" class="active">Projects</a></li>
+          <li><a href="../../../../pages/contact/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="project-detail">
+      <h2>Project Collatz</h2>
+      <p>
+        Project Collatz is a computational exploration where I verified the Collatz Conjecture for all integers up to 10 billion using Python. What began as a casual curiosity turned into an intensive coding and problem-solving challenge involving large-scale number theory and computational limits.
+      </p>
+      <p>
+        I first came across the Collatz Conjecture through a Quora post. The simplicity of the problem combined with its unsolved status instantly caught my attention. After doing some research and understanding its background, I thought it would be a fun and intellectually rewarding project to try verifying it across as many numbers as I could.
+      </p>
+      <p>
+        The core idea was simple: write a Python script to iterate through numbers and test the Collatz sequence logic for each. However, executing this on a large scale was not so straightforward. My personal device wasn’t powerful enough to handle billions of computations efficiently, so I turned to Google Colab to leverage cloud computing resources.
+      </p>
+      <p>
+        I optimized the code for performance, experimented with batch processing and progress tracking, and gradually pushed the range higher and higher. Through trial, error, and a lot of iteration, I was able to successfully verify the conjecture for all numbers up to 10 billion.
+      </p>
+      <p>
+        Eventually, I hit the limits of what I could do with the computational resources available to me. Cloud runtimes have time and memory constraints, and pushing further would require either dedicated hardware or more advanced parallel computing setups. Still, the experience of scaling a problem to billions of inputs taught me a great deal about algorithm efficiency, cloud tooling, and handling large data operations.
+      </p>
+      <p>
+        Project Collatz was a perfect blend of curiosity-driven learning and real-world technical challenge. While I wasn’t able to push the verification past 10 billion due to computational constraints, the project deepened my appreciation for mathematical problems and high-scale computation—and it showed me how far creative problem-solving and resourcefulness can take you, even without enterprise-level infrastructure.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vihaan Vikas. All rights reserved.</p>
+  </footer>
+
+  <script src="collatz.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* === Reset & Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 100px; /* Prevent content under fixed header */
+}
+
+/* === Header === */
+header {
+  background-color: #ececec;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+}
+
+header h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #222;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  display: inline-block; /* 👈 Needed for transform to visibly work */
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+nav a:hover {
+  color: #007acc;
+  transform: translateY(-3px);
+}
+
+nav a.active {
+  color: #007acc;
+}
+
+/* === Project Detail Section === */
+.project-detail {
+  padding: 4rem 0;
+}
+
+.project-detail h2 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+.project-detail p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 1rem;
+  max-width: 800px;
+}
+
+/* === Footer === */
+footer {
+  background-color: #f2f2f2;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 4rem;
+}
+
+/* === Animations === */
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .project-detail h2 {
+    font-size: 2rem;
+  }
+
+  .project-detail p {
+    font-size: 1rem;
+  }
+}
